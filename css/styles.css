@@ -252,10 +252,14 @@ padding: 94px 0;
   padding-bottom: 0;
 }
 .feature .icon-features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #F5F4FA;
-  padding: 25px;
+  height: 120px;
   margin-bottom: 30px;
   text-align: center;
+  border-radius: 4px;
 }
 .name {
   display: flex;
