@@ -105,12 +105,24 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
 }
-.auth-nav a:hover {
+.auth-nav a:hover,
+.auth-nav a:focus {
   color: var(--accent-colour);
 }
 .auth-nav .item + .item {
   margin-left: 50px;
+}
+.auth-nav a:hover svg,
+.auth-nav a:focus svg {
+  fill: var(--accent-colour);
+}
+.envelope,
+.telephone {
+  fill: #757575;
+  margin-right: 10px;
 }
 /* Hero */
 .hero {
@@ -157,7 +169,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color:rgba(44, 45, 55, 0.4),;
 }
 .visually-hidden {
   position: absolute;
@@ -240,10 +251,16 @@ padding: 94px 0;
 .section-feature {
   padding-bottom: 0;
 }
+.feature .icon-features {
+  background-color: #F5F4FA;
+  padding: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
 .name {
   display: flex;
 }
-.name li {
+.name > li {
   background-color: #fff;
   text-align: center;
   width: 270px;
@@ -251,7 +268,7 @@ padding: 94px 0;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.name li:last-child {
+.name > li:last-child {
   margin-right: 0;
 }
 .name p {
@@ -263,17 +280,80 @@ padding: 94px 0;
   margin-bottom: 10px;
 }
 .name p {
-  padding-bottom: 30px;
+  margin-bottom: 16px;
 }
 .name img {
   display: block;
+}
+.profile-share {
+  display: flex;
+  list-style: none;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+.profile-share li {
+  margin-right: 10px;
+}
+.profile-share li:last-child {
+  margin-right: 0;
+}
+.profile-share a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.profile-share a svg {
+  fill: #AFB1B8;;
+}
+.profile-share a:hover,
+.profile-share a:focus {
+  background-color: var(--accent-colour);
+  outline: none;
+}
+.profile-share a:hover svg,
+.profile-share a:focus svg{
+  fill: #fff;
+}
+/* Clients */
+.clients {
+  display: flex;
+}
+.clients a {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.clients a svg {
+  fill: #AFB1B8;
+}
+.clients li {
+  margin-right: 30px;
+}
+.clients li:last-child {
+  margin-right: 0;
+}
+.clients a:hover,
+.clients a:focus {
+  border: 1px solid var(--accent-colour);
+  outline: none;
+}
+.clients a:hover svg,
+.clients a:focus svg {
+fill: var(--accent-colour);
 }
 /* Footer */
 .footer {
   background: #2F303A;
   padding: 60px 0;
 }
-.footer ul {
+.footer ul.list {
   color: var(--primary-bg-color);
   font-style: normal;
   font-weight: 400;
@@ -281,7 +361,7 @@ padding: 94px 0;
   line-height: 1.71;
   margin-top: 20px;
 }
-.footer ul a {
+.footer ul.list a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
@@ -295,6 +375,31 @@ padding: 94px 0;
 .footer .logo {
   color: #ffffff;
 }
+.footer-icons {
+  margin-left: 70px;
+}
+.footer-icons h3 {
+  font-size: 14px;
+  font-weight: 700px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.footer .container {
+  display: flex;
+}
+.footer-icons .profile-share li a {
+ background-color:  rgba(255, 255, 255, 0.1);
+}
+.footer-icons .profile-share li a svg {
+  fill: #FFF; 
+}
+.footer-icons .profile-share li a:hover,
+.footer-icons .profile-share li a:focus {
+  background-color:  var(--accent-colour);
+  outline: none;
+ }
 /* Portfolio */
 .work-filter {
   margin-bottom: 50px;
@@ -312,6 +417,7 @@ padding: 94px 0;
 .work-filter .button:hover {
   color: var(--primary-bg-color);
   background-color: var(--accent-colour);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .work-filter button {
   font-weight: 500;
@@ -328,6 +434,9 @@ padding: 94px 0;
   text-decoration: none;
   display: block;
   background: #FFFFFF;
+}
+.work-items a:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .work-items h2 {
   font-weight: 700;
